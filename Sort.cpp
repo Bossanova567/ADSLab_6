@@ -94,9 +94,16 @@ int Partition(int* A, int p, int r){
     return i+1;
 }
 
+int RandomizedPartition(int* A, int p, int r){
+    srand(time(NULL));
+    int i = p + rand() % (r - p);
+    swap(&A[i], &A[r]);
+    return Partition(A, p, r);
+}
+
 void QuickSort(int* A, int p, int r){
     if (p < r){
-        int q = Partition(A, p, r);
+        int q = RandomizedPartition(A, p, r);
         QuickSort(A, p, q-1);
         QuickSort(A, q+1, r);
     }

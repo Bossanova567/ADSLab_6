@@ -13,4 +13,5 @@ void CountingSort(int* A, int n, int exp);
 void RadixSort(int* A, int n);
 int Partition(int* A, int p, int r);
 void QuickSort(int* A, int p, int r);
+int RandomizedPartition(int* A, int p, int r);
 #endif //ADSLAB_5_SORT_H
